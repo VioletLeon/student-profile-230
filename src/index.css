@@ -10,6 +10,11 @@ code {
     monospace;
 }
 
+hr {
+  width: 99%;
+  border: 1px solid #d3d3d3;
+}
+
 .mainContainer {
   position: absolute;
   left: 0;
@@ -19,7 +24,7 @@ code {
   width: 1000px;
   height: 80vh;
   border: 2px solid #d3d3d3;
-  border-radius: 25px;
+  border-radius: 10px;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -34,13 +39,28 @@ code {
   z-index: 1;
   top: 0px;
   background-color: #fff;
-  border-bottom: 1px solid #d3d3d3;
+}
+
+.searchBar {
+  outline: none;
+  font-family: 'Raleway';
+  font-size: 2rem;
+  text-indent: 2%;
+  width: 100%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-bottom: 2px solid #373737;
 }
 
 .studentContainer {
   display: flex;
   flex-direction: row;
-  border: 1px solid #d3d3d3;
+
   height: 220px;
 }
 
@@ -56,6 +76,7 @@ code {
   height: 175px;
   border-radius: 50%;
   border: 2px solid #d3d3d3;
+  margin-left: 25px;
 }
 
 .studentName {
@@ -71,4 +92,51 @@ code {
   font-size: 0.9em;
   text-indent: 12%;
   line-height: 20px;
+}
+
+.gradesContainer {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.9em;
+  text-indent: 29.5%;
+  line-height: 20px;
+}
+
+.gradeText {
+  margin-left: 20px;
+}
+
+.buttonExpand {
+  display: flex;
+  flex-grow: 1;
+  align-self: flex-start;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 0px;
+}
+
+.fa-plus {
+  color: #7e7e7e;
+  font-size: 2rem;
+}
+
+.fa-plus:hover {
+  color: #000;
+}
+
+.fa-minus {
+  color: #7e7e7e;
+  font-size: 2rem;
+}
+
+.fa-minus:hover {
+  color: #000;
 }
