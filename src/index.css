@@ -10,7 +10,7 @@ code {
     monospace;
 }
 
-.allStudentsContainer {
+.mainContainer {
   position: absolute;
   left: 0;
   right: 0;
@@ -18,19 +18,29 @@ code {
   margin: auto;
   width: 1000px;
   height: 80vh;
+  border: 2px solid #d3d3d3;
+  border-radius: 25px;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-.allStudentsContainer::-webkit-scrollbar {
+.mainContainer::-webkit-scrollbar {
   display: none;
+}
+
+.searchBarContainer {
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .studentContainer {
   display: flex;
   flex-direction: row;
-  border: 1px solid gray;
+  border: 1px solid #d3d3d3;
   height: 220px;
 }
 
@@ -45,7 +55,7 @@ code {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  border: 2px solid gray;
+  border: 2px solid #d3d3d3;
 }
 
 .studentName {
