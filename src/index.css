@@ -112,9 +112,9 @@ hr {
 
 .studentImageDiv {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-right: 50px;
+  margin-top: 20px;
 }
 
 .studentImage {
@@ -149,13 +149,7 @@ hr {
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-size: 0.9em;
-  text-indent: 29.5%;
   line-height: 20px;
-}
-
-.gradeText {
-  margin-left: 20px;
 }
 
 .buttonExpand {

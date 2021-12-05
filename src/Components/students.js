@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { act } from 'react-dom/test-utils';
 import { getStudents } from '../Hooks/students';
 
 export default function StudentsDisplay(props) {
@@ -57,6 +56,8 @@ export default function StudentsDisplay(props) {
                   if (lowerCase.includes(searchInput)) {
                     return student;
                   }
+
+                  return 0; // So no errors are given because of the arrow function
                 }
               })
               .filter((student) => {
@@ -69,6 +70,8 @@ export default function StudentsDisplay(props) {
                   ) {
                     return student;
                   }
+
+                  return 0; // So no errors are given because of the arrow function
                 }
               })
               .map((student) => {
@@ -105,6 +108,21 @@ export default function StudentsDisplay(props) {
                                 student.grades.length +
                               '%'}
                           </span>
+
+                          {activeStudents.includes(student.id) ? (
+                            <div className="gradesContainer">
+                              {student.grades.map((grade, index) => {
+                                return (
+                                  <span>
+                                    Test {index + 1}:{' '}
+                                    <span className="gradeText">{grade} %</span>
+                                  </span>
+                                );
+                              })}
+                            </div>
+                          ) : (
+                            <div />
+                          )}
 
                           {student.tags < 1 ? (
                             ''
@@ -164,20 +182,6 @@ export default function StudentsDisplay(props) {
                         )}
                       </div>
                     </div>
-                    {activeStudents.includes(student.id) ? (
-                      <div className="gradesContainer">
-                        {student.grades.map((grade, index) => {
-                          return (
-                            <span>
-                              Test {index + 1}:{' '}
-                              <span className="gradeText">{grade} %</span>
-                            </span>
-                          );
-                        })}
-                      </div>
-                    ) : (
-                      <div />
-                    )}
                     <hr />
                   </div>
                 );
