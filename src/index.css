@@ -1,6 +1,7 @@
 body,
 html,
 h1 {
+  background-color: rgb(243, 243, 243);
   margin: 0;
   font-family: 'Raleway';
 }
@@ -12,10 +13,11 @@ code {
 
 hr {
   width: 99%;
-  border: 1px solid #d3d3d3;
+  border: 1px solid rgb(243, 243, 243);
 }
 
 .mainContainer {
+  background-color: white;
   position: absolute;
   left: 0;
   right: 0;
@@ -23,11 +25,12 @@ hr {
   margin: auto;
   width: 1000px;
   height: 80vh;
-  border: 2px solid #d3d3d3;
+  border: 2px solid rgb(243, 243, 243);
   border-radius: 10px;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  box-shadow: 1px 1px #7e7e7e;
 }
 
 .mainContainer::-webkit-scrollbar {
@@ -44,12 +47,13 @@ hr {
 .searchBar {
   outline: none;
   font-family: 'Raleway';
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-indent: 2%;
   width: 100%;
+  height: 50px;
   background: transparent;
   border: 2px solid transparent;
-  border-bottom: 2px solid #d3d3d3;
+  border-bottom: 2px solid rgb(243, 243, 243);
 }
 
 .searchBar:focus {
@@ -57,11 +61,53 @@ hr {
   border-bottom: 2px solid #373737;
 }
 
+.tagsMain {
+  position: relative;
+  left: 42px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.tagContainer {
+  display: inline-flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #d3d3d3;
+  margin: 5px;
+  min-width: 50px;
+}
+
+.tagText {
+  position: relative;
+  left: -10%;
+  text-align: center;
+}
+
+.tagInput {
+  outline: none;
+  font-family: 'Raleway';
+  font-size: 1.5rem;
+  text-indent: 2%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-bottom: 2px solid rgb(243, 243, 243);
+}
+
+.tagInput:focus {
+  outline: none;
+  border-bottom: 2px solid #373737;
+}
+
 .studentContainer {
   display: flex;
   flex-direction: row;
-
-  height: 220px;
 }
 
 .studentImageDiv {
@@ -75,14 +121,18 @@ hr {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  border: 2px solid #d3d3d3;
+  border: 2px solid rgb(243, 243, 243);
   margin-left: 25px;
 }
 
 .studentName {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'Raleway';
   font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  background-color: transparent;
 }
 
 .studentInfo {
@@ -95,8 +145,7 @@ hr {
 }
 
 .gradesContainer {
-  position: relative;
-  top: -40px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   text-align: left;
